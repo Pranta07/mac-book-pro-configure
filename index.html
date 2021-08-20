@@ -41,34 +41,60 @@
                         <!-- memory-configuration -->
                         <div class="my-5">
                             <h5 class="fw-bold">Memory</h5>
-                            <button class="btn btn-outline-dark">
+                            <button
+                                id="memory8"
+                                onclick="updateMemoryCost(0)"
+                                class="btn btn-outline-dark"
+                            >
                                 8GB unified memory
                             </button>
-                            <button class="btn btn-outline-dark">
+                            <button
+                                id="memory16"
+                                onclick="updateMemoryCost(180)"
+                                class="btn btn-outline-dark"
+                            >
                                 16GB unified memory
                             </button>
                         </div>
                         <!-- storage-configuration -->
                         <div class="my-5">
                             <h5 class="fw-bold">Storage</h5>
-                            <button class="btn btn-outline-dark">
+                            <button
+                                id="storage256"
+                                onclick="updateStorageCost(0)"
+                                class="btn btn-outline-dark"
+                            >
                                 256GB SSD storage
                             </button>
-                            <button class="btn btn-outline-dark">
+                            <button
+                                id="storage512"
+                                onclick="updateStorageCost(100)"
+                                class="btn btn-outline-dark"
+                            >
                                 512GB SSD storage
                             </button>
-                            <button class="btn btn-outline-dark">
+                            <button
+                                id="storage1TB"
+                                onclick="updateStorageCost(180)"
+                                class="btn btn-outline-dark"
+                            >
                                 1TB SSD storage
                             </button>
                         </div>
                         <!-- delivery options -->
                         <div class="my-5">
                             <h5 class="fw-bold">Choose your delivery option</h5>
-                            <button class="btn btn-outline-dark">
-                                8GB unified memory
+                            <button
+                                onclick="updateDeliveryCharge(0)"
+                                class="btn btn-outline-dark"
+                            >
+                                Friday, Aug 25 FREE Delivery
                             </button>
-                            <button class="btn btn-outline-dark">
-                                16GB unified memory
+                            <button
+                                onclick="updateDeliveryCharge(20)"
+                                class="btn btn-outline-dark"
+                            >
+                                Friday, Aug 21 Delivery Charge $20
                             </button>
                         </div>
 
@@ -107,7 +133,7 @@
                                     <div class="d-flex justify-content-between">
                                         <p class="m-0">Total Price</p>
                                         <p class="m-0">
-                                            $<span id="total">1299</span>
+                                            $<span id="total-price">1299</span>
                                         </p>
                                     </div>
                                     <hr />
@@ -124,7 +150,9 @@
                                     id="promocode"
                                     class="p-2 border rounded border-1 bg-light"
                                 />
-                                <button class="btn btn-danger">Apply</button>
+                                <button class="btn btn-danger" id="apply-btn">
+                                    Apply
+                                </button>
                             </div>
                         </div>
                     </div>
