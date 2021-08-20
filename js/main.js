@@ -31,9 +31,14 @@ function updateTotalPrice() {
     grandTotal.innerText = total;
 }
 
+// update grand total after using promocode
 const promocode = document.getElementById("promocode");
 const applyButton = document.getElementById("apply-btn");
 applyButton.addEventListener("click", function () {
     const code = promocode.value;
+    if (code == "stevekaku") {
+        const total = parseInt(totalPrice.innerText);
+        grandTotal.innerText = total - total / 5;
+    }
     promocode.value = "";
 });
